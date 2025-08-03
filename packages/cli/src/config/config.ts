@@ -77,7 +77,7 @@ export async function parseArguments(): Promise<CliArgs> {
       alias: 'm',
       type: 'string',
       description: `Model`,
-      default: process.env.GEMINI_MODEL || DEFAULT_GEMINI_MODEL,
+      default: 'qwen3:1.7b',
     })
     .option('prompt', {
       alias: 'p',
@@ -209,6 +209,7 @@ export async function parseArguments(): Promise<CliArgs> {
     .option('openai-base-url', {
       type: 'string',
       description: 'OpenAI base URL (for custom endpoints)',
+      default: 'http://localhost:8000',
     })
     .option('proxy', {
       type: 'string',
@@ -295,6 +296,8 @@ export async function loadCliConfig(
   // Handle OpenAI API key from command line
   if (argv.openaiApiKey) {
     process.env.OPENAI_API_KEY = argv.openaiApiKey;
+  } else {
+    process.env.OPENAI_API_KEY = 'no-key';
   }
 
   // Handle OpenAI base URL from command line

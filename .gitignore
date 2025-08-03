@@ -1,45 +1,134 @@
-# API keys and secrets
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+#  Usually these files are written by a python script from a template
+#  before PyInstaller builds the exe, so as to inject date/other infos into it.
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+.pytest_cache/
+.hypothesis/
+pytest-report.html
+pytest-report.xml
+coverage.xml
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+#   For a library or application, you probably want to ignore this, since files
+#   in this directory are specific to a user's env.
+#   To ignore everything under .pyenv, add '**/.pyenv/' to .gitignore - please note
+#   the trailing slash to avoid ignoring a file named '.pyenv' in a higher dir.
+.python-version
+
+# pydantic
+.pydantic-core-build/
+
+# PEP 582; used by e.g. pdm
+__pypackages__/
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
 .env
-.env~
+.venv
+llm/
 
-# gemini-cli settings
-.gemini/
-!gemini/config.yaml
+#mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
 
-# Note: .gemini-clipboard/ is NOT in gitignore so Gemini can access pasted images
+# Pyre type checker
+.pyre/
 
-# Dependency directory
-node_modules
-bower_components
+# pytype static type analyzer
+.pytype/
 
-# Editors
-.idea
-*.iml
+# Cython debug symbols
+cython_debug/
 
-# OS metadata
-.DS_Store
-Thumbs.db
+# PyCharm
+#  JetBrains Editors https://www.jetbrains.com/help/pycharm/sharing-your-project.html
+.idea/
 
-# TypeScript build info files
-*.tsbuildinfo
+# VSCode
+.vscode/
 
-# Ignore built ts files
-dist
+# Logs
+*.log
+*.json
+!gpt-4.1-mini_2025-08-03_20-38-12_prompts.json
 
-# Docker folder to help skip auth refreshes
-.docker
-
-bundle
-
-# Test report files
-junit.xml
-packages/*/coverage/
-
-# Generated files
-packages/cli/src/generated/
-.integration-tests/
-packages/vscode-ide-companion/*.vsix
-
-# Qwen Code Configs
-.qwen/
-logs/
+bundle/
+@llm/
+node_modules/

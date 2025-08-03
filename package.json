@@ -1,5 +1,5 @@
 {
-  "name": "@qwen-code/qwen-thomas",
+  "name": "qwen-thomas",
   "version": "0.0.4",
   "engines": {
     "node": ">=20.0.0"
@@ -16,7 +16,7 @@
     "sandboxImageUri": "ghcr.io/qwenlm/qwen-code:0.0.4"
   },
   "scripts": {
-    "start": "node scripts/start.js",
+    "start": "OPENAI_BASE_URL='http://localhost:8000' OPENAI_MODEL='qwen3:1.7b' node scripts/start.js",
     "debug": "cross-env DEBUG=1 node --inspect-brk scripts/start.js",
     "auth:npm": "npx google-artifactregistry-auth",
     "auth:docker": "gcloud auth configure-docker us-west1-docker.pkg.dev",
