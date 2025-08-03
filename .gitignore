@@ -125,9 +125,7 @@ cython_debug/
 .vscode/
 
 # Logs
-*.log
-*.json
-!gpt-4.1-mini_2025-08-03_20-38-12_prompts.json
+
 
 bundle/
 @llm/
